@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VueVirtualTree from "./vueVirtualTree/tree.vue";
+import VueVirtualLazyTree from "./vueVirtualLazyTree/tree.vue";
 import { getSubScope } from "./api/index";
 import { ref } from "vue";
 
@@ -42,7 +42,7 @@ const lazyLoadFun = async (node: any, resolve: any) => {
 <template>
   <div class="tree-wrapper">
     <div style="margin-bottom: 12px">虚拟树-支持懒加载</div>
-    <VueVirtualTree
+    <VueVirtualLazyTree
       :props="props"
       :nodeKey="props.nodeKey"
       :load="props.lazyLoad"
@@ -53,7 +53,7 @@ const lazyLoadFun = async (node: any, resolve: any) => {
       :indent="8"
       :item-size="32"
       show-checkbox
-    ></VueVirtualTree>
+    ></VueVirtualLazyTree>
   </div>
 </template>
 

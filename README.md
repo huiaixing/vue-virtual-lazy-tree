@@ -1,4 +1,4 @@
-# VueVirtualTree
+# VueVirtualLazyTree
 ## 介绍
 
 vue3版本 基于 element-plus 和 vue-virtual-scroller 实现的支持懒加载的虚拟树组件
@@ -10,17 +10,17 @@ Install:
 
 ```bash
 # 安装
-npm install vue-virtual-tree --save
+npm install vue-virtual--lazy-tree --save
 ```
 
 Then:
 
 ```javascript
 // main.js
-import VueVirtualTree from 'vue-virtual-tree';
-import 'vue-virtual-tree/dist/vue-virtual-tree.css';
+import VueVirtualLazyTree from 'vue-virtual--lazy-tree';
+import 'vue-virtual--lazy-tree/dist/vue-virtual--lazy-tree.css';
 
-app.use(VueVirtualTree.install(app));
+app.use(VueVirtualLazyTree.install(app));
 
 // 具体demo可见app.vue
 const lazyLoadFun = async (node: any, resolve: any) => {
@@ -41,7 +41,7 @@ const props = {
   lazyLoad: (node: any, resolve: any) => lazyLoadFun(node, resolve),
 };
 
-<VueVirtualTree
+<VueVirtualLazyTree
   :props="props"
   :nodeKey="props.nodeKey"
   :load="props.lazyLoad"
@@ -52,7 +52,7 @@ const props = {
   :indent="8"
   :item-size="32"
   show-checkbox
-></VueVirtualTree>
+></VueVirtualLazyTree>
 ```
 
 

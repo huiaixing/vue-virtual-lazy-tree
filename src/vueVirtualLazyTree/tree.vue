@@ -98,10 +98,9 @@ import type {
   TreeKey,
   TreeNodeData,
 } from './tree.type';
-import { divide } from 'lodash-es';
 
 export default defineComponent({
-  name: 'VueVirtualTree',
+  name: 'VueVirtualLazyTree',
   components: { MyElTreeNode, MyElTreeVirtualNode, RecycleScroller },
   props: {
     data: {

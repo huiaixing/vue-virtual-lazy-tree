@@ -1,7 +1,7 @@
-import VueVirtualTree from "./vueVirtualTree/tree.vue";
-export { VueVirtualTree };
+import VueVirtualLazyTree from "./VueVirtualLazyTree/tree.vue";
+export { VueVirtualLazyTree };
 export default {
   install: (app) => {
-    app.component("VueVirtualTree", VueVirtualTree);
+    app.component("VueVirtualLazyTree", VueVirtualLazyTree);
   },
 };

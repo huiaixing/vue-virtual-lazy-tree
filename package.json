@@ -1,13 +1,13 @@
 {
-  "name": "vue-virtual-tree",
+  "name": "vue-virtual--lazy-tree",
   "version": "1.0.0",
   "description": "virtual tree, based on vue3, support lazy Mode",
-  "main": "dist/vue-virtual-tree-umd.js",
-  "module": "dist/vue-virtual-tree-es.js",
+  "main": "dist/vue-virtual--lazy-tree-umd.js",
+  "module": "dist/vue-virtual--lazy-tree-es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-virtual-tree.es.js",
-      "require": "./dist/vue-virtual-tree.umd.js"
+      "import": "./dist/vue-virtual--lazy-tree.es.js",
+      "require": "./dist/vue-virtual--lazy-tree.umd.js"
     }
   },
   "scripts": {
