@@ -10,15 +10,15 @@ Install:
 
 ```bash
 # 安装
-npm install vue-virtual--lazy-tree --save
+npm install vue-virtual-lazy-tree --save
 ```
 
 Then:
 
 ```javascript
 // main.js
-import VueVirtualLazyTree from 'vue-virtual--lazy-tree';
-import 'vue-virtual--lazy-tree/dist/vue-virtual--lazy-tree.css';
+import VueVirtualLazyTree from 'vue-virtual-lazy-tree';
+import 'vue-virtual-lazy-tree/dist/vue-virtual-lazy-tree.css';
 
 app.use(VueVirtualLazyTree.install(app));
 

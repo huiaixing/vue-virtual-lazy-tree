@@ -32,7 +32,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       lib: {
         entry: resolve(__dirname, 'src/index.js'),
         name: 'VueVirtualLazyTree',
-        fileName: (format) => `vue-virtual--lazy-tree.${format}.js`
+        fileName: (format) => `vue-virtual-lazy-tree.${format}.js`
       },
       rollupOptions: {
         external: ['vue'],
