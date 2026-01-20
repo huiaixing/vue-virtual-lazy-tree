@@ -4,7 +4,7 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 // 验证 引入dist包
 // import VueVirtualLazyTree from 'vue-virtual-lazy-tree';
-// import 'vue-virtual-lazy-tree/dist/vue-virtual-lazy-tree.css';
+// import 'vue-virtual-lazy-tree/vue-virtual-lazy-tree.css';
 const app = createApp(App)
 
 app.use(ElementPlus)

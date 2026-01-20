@@ -18,7 +18,7 @@ Then:
 ```javascript
 // main.js
 import VueVirtualLazyTree from 'vue-virtual-lazy-tree';
-import 'vue-virtual-lazy-tree.css';
+import 'vue-virtual-lazy-tree/vue-virtual-lazy-tree.css';
 
 app.use(VueVirtualLazyTree.install(app));
 
