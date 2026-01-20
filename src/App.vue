@@ -4,7 +4,7 @@ import { getSubScope } from "./api/index";
 import { ref } from "vue";
 
 const cascadeModelKeys = ref(["深圳市"]);
-const defaultExpandKeys = ref(["广东省"]);
+const defaultExpandKeys = ref(["中国", "广东省"]);
 
 const props = {
   nodeKey: "value",
@@ -49,11 +49,20 @@ const lazyLoadFun = async (node: any, resolve: any) => {
       :lazy="props.lazy"
       :default-expanded-keys="defaultExpandKeys"
       :default-checked-keys="cascadeModelKeys"
+      show-checkbox
+    ></VueVirtualLazyTree>
+    <!-- <VueVirtualLazyTree
+      :props="props"
+      :nodeKey="props.nodeKey"
+      :load="props.lazyLoad"
+      :lazy="props.lazy"
+      :default-expanded-keys="defaultExpandKeys"
+      :default-checked-keys="cascadeModelKeys"
       height="100%"
       :indent="8"
       :item-size="32"
       show-checkbox
-    ></VueVirtualLazyTree>
+    ></VueVirtualLazyTree> -->
   </div>
 </template>
 

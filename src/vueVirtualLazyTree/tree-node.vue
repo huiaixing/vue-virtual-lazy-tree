@@ -66,7 +66,7 @@
         role="group"
         :aria-expanded="expanded"
       >
-        <my-el-tree-node
+        <el-tree-node
           v-for="child in node.childNodes"
           :key="getNodeKey(child)"
           :render-content="renderContent"
@@ -83,18 +83,30 @@
 </template>
 <script lang="ts">
 // @ts-nocheck
-import { defineComponent, nextTick } from 'vue';
-import { ElCollapseTransition, ElCheckbox, ElIcon } from 'element-plus';
+import {
+  defineComponent,
+  getCurrentInstance,
+  inject,
+  nextTick,
+  provide,
+  watch,
+} from 'vue';
+import ElCollapseTransition from 'element-plus/es/components/collapse-transition/index.mjs';
+import ElCheckbox from 'element-plus/es/components/checkbox/index.mjs';
+import { ElIcon } from 'element-plus/es/components/icon/index.mjs';
 import { CaretRight, Loading } from '@element-plus/icons-vue';
 import { useNamespace } from 'element-plus/es/hooks/index.mjs';
 import NodeContent from './tree-node-content.vue';
-import { useCommonMethod } from './hooks/useCommonMethod';
+import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast';
+import { dragEventsKey } from './model/useDragNode';
 import Node from './model/node';
+
 import type { PropType } from 'vue';
 import type { TreeOptionProps } from './tree.type';
+import { useCommonMethod } from './hooks/useCommonMethod';
 
 export default defineComponent({
-  name: 'MyElTreeNode',
+  name: 'ElTreeNode',
   components: {
     ElCollapseTransition,
     ElCheckbox,

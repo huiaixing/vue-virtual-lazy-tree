@@ -24,7 +24,7 @@
       :buffer="buffer"
       v-slot="{ active, item }"
     >
-      <my-el-tree-virtual-node
+      <el-tree-virtual-node
         v-if="active"
         :style="`height: ${itemSize}px;`"
         :node="item"
@@ -36,7 +36,7 @@
       />
     </RecycleScroller>
     <template v-else-if="!height">
-      <my-el-tree-node
+      <el-tree-node
         v-for="child in root.childNodes"
         :key="getNodeKey(child)"
         :node="child"
@@ -82,14 +82,14 @@ import {
   getNodeKey as getNodeKeyUtil,
   handleCurrentChange,
 } from './model/util';
-import MyElTreeNode from './tree-node.vue';
+import ElTreeNode from './tree-node.vue';
 import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast';
 import { useDragNodeHandler } from './model/useDragNode';
 import { useKeydown } from './model/useKeydown';
 import type Node from './model/node';
 import { RecycleScroller } from 'vue-virtual-scroller';
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css';
-import MyElTreeVirtualNode from './virtual-tree-node.vue';
+import TreeVirtualNode from './virtual-tree-node.vue';
 import type { ComponentInternalInstance, PropType } from 'vue';
 import type { Nullable } from 'element-plus/es/utils/index.mjs';
 import type {
@@ -101,7 +101,7 @@ import type {
 
 export default defineComponent({
   name: 'VueVirtualLazyTree',
-  components: { MyElTreeNode, MyElTreeVirtualNode, RecycleScroller },
+  components: { ElTreeNode, TreeVirtualNode, RecycleScroller },
   props: {
     data: {
       type: Array,

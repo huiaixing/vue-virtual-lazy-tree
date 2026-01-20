@@ -77,35 +77,24 @@ import {
   inject,
   nextTick,
   provide,
-  ref,
   watch,
 } from 'vue';
-import {
-  debugWarn,
-  isFunction,
-  isString,
-} from 'element-plus/es/utils/index.mjs';
 import ElCollapseTransition from 'element-plus/es/components/collapse-transition/index.mjs';
 import ElCheckbox from 'element-plus/es/components/checkbox/index.mjs';
 import { ElIcon } from 'element-plus/es/components/icon/index.mjs';
 import { CaretRight, Loading } from '@element-plus/icons-vue';
 import { useNamespace } from 'element-plus/es/hooks/index.mjs';
 import NodeContent from './tree-node-content.vue';
-import {
-  getNodeKey as getNodeKeyUtil,
-  handleCurrentChange,
-} from './model/util';
 import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast';
 import { dragEventsKey } from './model/useDragNode';
 import Node from './model/node';
 
-import type { ComponentInternalInstance, PropType } from 'vue';
-import type { Nullable } from 'element-plus/es/utils/index.mjs';
-import type { RootTreeType, TreeNodeData, TreeOptionProps } from './tree.type';
+import type { PropType } from 'vue';
+import type { TreeOptionProps } from './tree.type';
 import { useCommonMethod } from './hooks/useCommonMethod';
 
 export default defineComponent({
-  name: 'MyElTreeVirtualNode',
+  name: 'ElTreeVirtualNode',
   components: {
     ElCollapseTransition,
     ElCheckbox,
